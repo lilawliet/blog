@@ -1,9 +1,9 @@
-import { slug } from 'github-slugger'
-import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
 import ListLayout from '@/layouts/ListLayoutWithTags'
-import { allBlogs } from 'contentlayer/generated'
 import tagData from 'app/tag-data.json'
+import { allBlogs } from 'contentlayer/generated'
+import { slug } from 'github-slugger'
 import { notFound } from 'next/navigation'
+import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer'
 
 const POSTS_PER_PAGE = 5
 
@@ -13,7 +13,8 @@ export const generateStaticParams = async () => {
     const postCount = tagCounts[tag]
     const totalPages = Math.max(1, Math.ceil(postCount / POSTS_PER_PAGE))
     return Array.from({ length: totalPages }, (_, i) => ({
-      tag: encodeURI(tag),
+      // tag: encodeURI(tag),
+      tag,
       page: (i + 1).toString(),
     }))
   })
