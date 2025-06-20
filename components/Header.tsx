@@ -1,10 +1,11 @@
-import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
-import Logo from '@/data/logo.svg'
+import siteMetadata from '@/data/siteMetadata'
+import Github from './Github'
 import Link from './Link'
+import Logo from './Logo'
 import MobileNav from './MobileNav'
-import ThemeSwitch from './ThemeSwitch'
 import SearchButton from './SearchButton'
+import ThemeSwitch from './ThemeSwitch'
 
 const Header = () => {
   let headerClass = 'flex items-center w-full bg-white dark:bg-gray-950 justify-between py-10'
@@ -44,6 +45,7 @@ const Header = () => {
         </div>
         <SearchButton />
         <ThemeSwitch />
+        <Github url="https://github.com/lilawliet/blog" />
         <MobileNav />
       </div>
     </header>
