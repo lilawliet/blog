@@ -3,11 +3,11 @@
 import Card from '@/components/Card'
 import Link from '@/components/Link'
 import MasonryGrid from '@/components/MasonryGrid'
-import { projectsData } from '@/data/projectsData'
+import { projectsData, TAG } from '@/data/projectsData'
 import projectTechData from 'app/project-tech-data.json'
 import useBreakpoint from 'hooks/useBreakpoint'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
-import { useEffect, useMemo, useState } from 'react'
+import { Suspense, useEffect, useMemo, useState } from 'react'
 
 interface PaginationProps {
   totalPages: number
@@ -62,7 +62,7 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
   )
 }
 
-export default function ProjectListLayoutWithTags({ title }: ListLayoutProps) {
+function ProjectListContent({ title }: ListLayoutProps) {
   const pathname = usePathname()
   const router = useRouter()
   const searchParams = useSearchParams()
@@ -94,7 +94,7 @@ export default function ProjectListLayoutWithTags({ title }: ListLayoutProps) {
     }
 
     return projectsData.filter((project) => {
-      return project.tags && project.tags.includes(selectedTag as any)
+      return project.tags && project.tags.includes(selectedTag as TAG)
     })
   }, [selectedTag])
 
@@ -162,7 +162,7 @@ export default function ProjectListLayoutWithTags({ title }: ListLayoutProps) {
                     {sortedTags.map((t) => {
                       const isSelected = selectedTag === t
                       const tagProjects = projectsData.filter(
-                        (project) => project.tags && project.tags.includes(t as any)
+                        (project) => project.tags && project.tags.includes(t as TAG)
                       )
 
                       return (
@@ -255,5 +255,13 @@ export default function ProjectListLayoutWithTags({ title }: ListLayoutProps) {
         </div>
       </div>
     </>
+  )
+}
+
+export default function ProjectListLayoutWithTags({ title }: ListLayoutProps) {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ProjectListContent title={title} />
+    </Suspense>
   )
 }

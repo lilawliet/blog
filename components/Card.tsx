@@ -1,8 +1,24 @@
 import Image from './Image'
 import Link from './Link'
 
-const Card = ({ title, description, imgSrc, href }) => {
+interface CardProps {
+  title: string
+  description: string
+  imgSrc?: string
+  href?: string
+}
+
+const Card = ({ title, description, imgSrc, href }: CardProps) => {
   const isClickable = !!href
+
+  const handleKeyDown = (event: React.KeyboardEvent) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault()
+      if (isClickable) {
+        window.open(href, '_blank')
+      }
+    }
+  }
 
   return (
     <div className="mb-4 w-full break-inside-avoid sm:mb-6">
@@ -22,6 +38,7 @@ const Card = ({ title, description, imgSrc, href }) => {
             window.open(href, '_blank')
           }
         }}
+        onKeyDown={handleKeyDown}
       >
         {imgSrc &&
           (href ? (
