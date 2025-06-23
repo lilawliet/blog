@@ -1,0 +1,22 @@
+{
+  "react-native": 1,
+  "react": 1,
+  "redux-toolkit": 1,
+  "typescript": 1,
+  "docker": 1,
+  "go": 1,
+  "mongodb": 1,
+  "vue3": 1,
+  "uni-app": 1,
+  "tailwindcss": 1,
+  "nextjs": 1,
+  "graphql": 1,
+  "fastify": 1,
+  "html": 1,
+  "css": 1,
+  "js": 1,
+  "h5": 1,
+  "vite": 1,
+  "element-plus": 1,
+  "pinia": 1
+}

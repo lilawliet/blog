@@ -1,56 +1,86 @@
 import Image from './Image'
 import Link from './Link'
 
-const Card = ({ title, description, imgSrc, href }) => (
-  <div className="md max-w-[544px] p-4 md:w-1/2">
-    <div
-      className={`${
-        imgSrc && 'h-full'
-      } overflow-hidden rounded-md border-2 border-gray-200/60 dark:border-gray-700/60`}
-    >
-      {imgSrc &&
-        (href ? (
-          <Link href={href} aria-label={`Link to ${title}`}>
+const Card = ({ title, description, imgSrc, href }) => {
+  const isClickable = !!href
+
+  return (
+    <div className="mb-4 w-full break-inside-avoid sm:mb-6">
+      <div
+        className={`${
+          imgSrc && 'h-full'
+        } overflow-hidden rounded-md border-2 border-gray-200/60 bg-white transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl hover:shadow-gray-200/60 dark:border-gray-700/60 dark:bg-gray-800 dark:hover:shadow-gray-800/60 ${
+          isClickable
+            ? 'hover:border-primary-400 dark:hover:border-primary-500 group focus-within:ring-primary-500 focus-within:ring-opacity-50 cursor-pointer focus-within:ring-2 focus-within:outline-none'
+            : 'cursor-default opacity-90'
+        }`}
+        tabIndex={isClickable ? 0 : -1}
+        role={isClickable ? 'button' : undefined}
+        aria-label={isClickable ? `查看项目: ${title}` : `项目: ${title}`}
+        onClick={() => {
+          if (isClickable) {
+            window.open(href, '_blank')
+          }
+        }}
+      >
+        {imgSrc &&
+          (href ? (
+            <Link href={href} aria-label={`Link to ${title}`}>
+              <Image
+                alt={title}
+                src={imgSrc}
+                className="h-32 w-full object-cover object-center transition-transform duration-500 ease-in-out group-hover:scale-110 sm:h-48"
+                width={544}
+                height={306}
+              />
+            </Link>
+          ) : (
             <Image
               alt={title}
               src={imgSrc}
-              className="object-cover object-center md:h-36 lg:h-48"
+              className="h-32 w-full object-cover object-center sm:h-48"
               width={544}
               height={306}
             />
-          </Link>
-        ) : (
-          <Image
-            alt={title}
-            src={imgSrc}
-            className="object-cover object-center md:h-36 lg:h-48"
-            width={544}
-            height={306}
-          />
-        ))}
-      <div className="p-6">
-        <h2 className="mb-3 text-2xl leading-8 font-bold tracking-tight">
+          ))}
+        <div className="p-4 sm:p-6">
+          <h2 className="mb-2 text-xl leading-7 font-bold tracking-tight sm:mb-3 sm:text-2xl sm:leading-8">
+            {href ? (
+              <Link
+                href={href}
+                aria-label={`Link to ${title}`}
+                className="hover:text-primary-500 dark:hover:text-primary-400 focus:ring-primary-500 focus:ring-opacity-50 rounded transition-colors duration-200 focus:ring-2 focus:outline-none"
+              >
+                {title}
+              </Link>
+            ) : (
+              <span className="text-gray-600 dark:text-gray-400">{title}</span>
+            )}
+          </h2>
+          <p className="prose mb-2 max-w-none text-sm text-gray-500 sm:mb-3 sm:text-base dark:text-gray-400">
+            {description}
+          </p>
           {href ? (
-            <Link href={href} aria-label={`Link to ${title}`}>
-              {title}
+            <Link
+              href={href}
+              className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 focus:ring-primary-500 focus:ring-opacity-50 inline-flex items-center rounded text-sm leading-6 font-medium transition-all duration-200 group-hover:translate-x-1 hover:underline focus:ring-2 focus:outline-none sm:text-base"
+              aria-label={`Link to ${title}`}
+            >
+              阅读更多
+              <span
+                className="ml-1 transition-transform duration-200 group-hover:translate-x-1"
+                aria-hidden="true"
+              >
+                →
+              </span>
             </Link>
           ) : (
-            title
+            <></>
           )}
-        </h2>
-        <p className="prose mb-3 max-w-none text-gray-500 dark:text-gray-400">{description}</p>
-        {href && (
-          <Link
-            href={href}
-            className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 text-base leading-6 font-medium"
-            aria-label={`Link to ${title}`}
-          >
-            Learn more &rarr;
-          </Link>
-        )}
+        </div>
       </div>
     </div>
-  </div>
-)
+  )
+}
 
 export default Card

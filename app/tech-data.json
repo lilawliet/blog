@@ -1,0 +1,10 @@
+{
+  "react-native": 1,
+  "react": 1,
+  "redux-toolkit": 1,
+  "typescript": 1,
+  "docker": 1,
+  "go": 1,
+  "mongodb": 1,
+  "web3": 1
+}

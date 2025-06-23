@@ -69,6 +69,9 @@
   .space-grotesk-bold {
     font-family: var(--font-space-grotesk-bold);
   }
+  .break-inside-avoid {
+    break-inside: avoid;
+  }
 }
 
 /* Core theme configuration */
