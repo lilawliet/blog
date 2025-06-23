@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 function getBreakpoint() {
-  const width = window.innerWidth
+  const width = window?.innerWidth || 1024
   if (width < 640) return 'sm'
   if (width >= 640 && width < 768) return 'md'
   if (width >= 768 && width < 1024) return 'lg'
