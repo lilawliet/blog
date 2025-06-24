@@ -175,6 +175,7 @@ export const Project = defineDocumentType(() => ({
     layout: { type: 'string' },
     bibliography: { type: 'string' },
     canonicalUrl: { type: 'string' },
+    target: { type: 'string' },
   },
   computedFields: {
     ...computedFields,

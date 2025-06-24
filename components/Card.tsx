@@ -6,9 +6,10 @@ interface CardProps {
   description: string
   imgSrc?: string
   href?: string
+  target?: string
 }
 
-const Card = ({ title, description, imgSrc, href }: CardProps) => {
+const Card = ({ title, description, imgSrc, href, target }: CardProps) => {
   const isClickable = !!href
 
   const handleKeyDown = (event: React.KeyboardEvent) => {
@@ -35,7 +36,7 @@ const Card = ({ title, description, imgSrc, href }: CardProps) => {
         aria-label={isClickable ? `查看项目: ${title}` : `项目: ${title}`}
         onClick={() => {
           if (isClickable) {
-            window.open(href, '_blank')
+            window.open(href, target || '_blank')
           }
         }}
         onKeyDown={handleKeyDown}

@@ -224,7 +224,10 @@ function ProjectListContent({ title }: ListLayoutProps) {
                           key={d.id}
                           title={d.name}
                           description={d.description}
-                          imgSrc={d.images?.[0]}
+                          imgSrc={
+                            d.images?.[0] ? `${process.env.BASE_PATH || ''}${d.images[0]}` : ''
+                          }
+                          target={d.target}
                           href={d.link}
                         />
                       ))}

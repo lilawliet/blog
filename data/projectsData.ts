@@ -47,10 +47,48 @@ export type PROJECT = {
   tags?: TAG[]
   link?: string
   highlight?: boolean // 完整性 , 参与度 , 投入时间 高的项目
-  position: string
+  target?: string
 }
 
 export const projectsData: PROJECT[] = [
+  {
+    id: 'marsbetta',
+    name: 'Stellux 交易系统多端',
+    highlight: true,
+    description: 'Stellux 交易系统多端开发，包括客户端，管理端，H5 和 APP 的开发工作',
+    company: '珠海钛河谷科技',
+    resonsibility: 'ant design & umijs & tradingview 搭建的外汇交易系统前端 / 后端 / H5 / app',
+    tags: ['ant design', 'umijs', 'tradingview', 'react-native', 'react'],
+    startTime: '2024-07',
+    endTime: '2025-06',
+    images: [],
+  },
+  {
+    id: 'marsbetta',
+    name: 'Mars Betta',
+    highlight: true,
+    description: 'Mars Betta 企业官网',
+    company: '珠海钛河谷科技',
+    resonsibility: 'nextjs & magic-ui & tailwindcss 搭建的官网，适配多端',
+    tags: ['nextjs', 'tailwindcss', 'magic-ui'],
+    startTime: '2025-01',
+    endTime: '2025-06',
+    link: 'https://www.marsbetta.com',
+    images: ['/static/marsbetta/mb01.png'],
+  },
+  {
+    id: 'stellux',
+    name: 'Stellux',
+    highlight: true,
+    description: 'Stellux 交易系统官网',
+    company: '珠海钛河谷科技',
+    resonsibility: 'nextjs & magic-ui & tailwindcss 搭建的官网，适配多端',
+    tags: ['nextjs', 'tailwindcss', 'magic-ui'],
+    startTime: '2024-12',
+    endTime: '2025-01',
+    link: 'https://stellux.io',
+    images: ['/static/stellux_www/stellux01.png', '/static/stellux_www/stellux02.png'],
+  },
   {
     id: 'yuehua_uniapp1',
     name: '鲜美科技业务系统前端',
@@ -58,12 +96,10 @@ export const projectsData: PROJECT[] = [
     description: '鲜美科技业务系统前端搭建及组件化及部署配置等工作,及模块开发工作',
     company: '珠海鲜美科技',
     resonsibility: '从零到一部署鲜美科技业务系统前端',
-    tags: ['vite', 'tailwind', 'vue3', 'pinpa', 'element-plus'],
+    tags: ['vite', 'tailwindcss', 'vue3', 'pinpa', 'element-plus'],
     startTime: '2023-07',
     endTime: '至今',
     images: [],
-    // images: ['/xianmei/微信截图_20240415181710.png', '/xianmei/微信截图_20240415181727.png', '/xianmei/IMG_5016.GIF'],
-    position: 'self-start',
   },
   {
     id: 'yuehua_uniapp',
@@ -79,7 +115,6 @@ export const projectsData: PROJECT[] = [
     endTime: '2024-03',
     // images: ['/yuehua/微信截图_20240415180930.png', '/yuehua/微信截图_20240415181000.png'],
     images: [],
-    position: 'self-start',
   },
   {
     id: 'yuehua_home',
@@ -90,12 +125,11 @@ export const projectsData: PROJECT[] = [
       '为珠海粤华园林搭建的官网，主要功能包括公司介绍、服务项目、案例展示、新闻动态、联系我们等',
     company: '珠海鲜美科技',
     resonsibility: '独立开发，项目多个版本迭代工作',
-    tags: ['html', 'css', 'js', 'tailwind', 'h5'],
+    tags: ['html', 'css', 'js', 'tailwindcss', 'h5'],
     startTime: '2023-08',
     endTime: '2023-12',
     // images: ['/yuehua/微信截图_20240415180930.png', '/yuehua/微信截图_20240415181000.png'],
     images: [],
-    position: 'self-start',
   },
   {
     id: 'bessage',
@@ -137,8 +171,8 @@ export const projectsData: PROJECT[] = [
       '/static/bessage/15.png',
       '/static/bessage/16.png',
     ],
-    position: 'self-start',
     link: '/projects/bessage',
+    target: '_self',
   },
   {
     id: 'chatgpt-server',
@@ -149,7 +183,6 @@ export const projectsData: PROJECT[] = [
     startTime: '2023-03',
     endTime: '2023-03',
     images: [],
-    position: 'self-end',
   },
   {
     id: 'nextjs-graphql-demo',
@@ -161,7 +194,6 @@ export const projectsData: PROJECT[] = [
     startTime: '2022-02',
     endTime: '2022-02',
     images: [],
-    position: 'self-end',
   },
   {
     id: 'football-client',
@@ -190,7 +222,6 @@ export const projectsData: PROJECT[] = [
       '/static/football-client/14.png',
       '/static/football-client/15.png',
     ],
-    position: 'self-start',
   },
   {
     id: 'paragon-wallet',
@@ -202,7 +233,6 @@ export const projectsData: PROJECT[] = [
     startTime: '2022-06',
     endTime: '2022-07',
     images: [],
-    position: 'self-start',
   },
   {
     id: 'paragon-extension',
@@ -226,7 +256,6 @@ export const projectsData: PROJECT[] = [
       '/static/paragon-extension/10.png',
       '/static/paragon-extension/11.png',
     ],
-    position: 'self-start',
   },
   {
     id: 'novo-base',
@@ -237,7 +266,6 @@ export const projectsData: PROJECT[] = [
     startTime: '2022-03',
     endTime: '2022-06',
     images: [],
-    position: 'self-start',
   },
   {
     id: 'rsb25',
@@ -250,7 +278,6 @@ export const projectsData: PROJECT[] = [
     startTime: '2021-08',
     endTime: '2021-10',
     images: [],
-    position: 'self-end',
   },
   {
     id: 'rsb20',
@@ -265,7 +292,6 @@ export const projectsData: PROJECT[] = [
     startTime: '2021-06',
     endTime: '2021-10',
     images: [],
-    position: 'self-end',
   },
   {
     id: 'zjjk2',
@@ -278,7 +304,6 @@ export const projectsData: PROJECT[] = [
     startTime: '2021-01',
     endTime: '2021-03',
     images: [],
-    position: 'self-start',
   },
   {
     id: 'cjhd',
@@ -290,7 +315,6 @@ export const projectsData: PROJECT[] = [
     startTime: '2020-03',
     endTime: '2021-13',
     images: [],
-    position: 'self-start',
   },
   {
     id: 'zjjk1',
@@ -304,7 +328,6 @@ export const projectsData: PROJECT[] = [
     startTime: '2021-01',
     endTime: '2021-13',
     images: [],
-    position: 'self-start',
   },
   {
     id: 'flask-vue',
@@ -316,7 +339,6 @@ export const projectsData: PROJECT[] = [
     startTime: '2020-02',
     endTime: '2020-02',
     images: [],
-    position: 'self-end',
   },
   {
     id: 'python-demo',
@@ -328,7 +350,6 @@ export const projectsData: PROJECT[] = [
     startTime: '2019-12',
     endTime: '2020-02',
     images: [],
-    position: 'self-end',
   },
   {
     id: 'zjjk-web',
@@ -341,7 +362,6 @@ export const projectsData: PROJECT[] = [
     startTime: '2018-12',
     endTime: '2019-01',
     images: [],
-    position: 'self-start',
   },
   {
     id: 'zsnp',
@@ -354,7 +374,6 @@ export const projectsData: PROJECT[] = [
     startTime: '2018-09',
     endTime: '2019-01',
     images: [],
-    position: 'self-start',
   },
   {
     id: 'python-web',
@@ -366,7 +385,6 @@ export const projectsData: PROJECT[] = [
     startTime: '2018-04',
     endTime: '2018-08',
     images: [],
-    position: 'self-end',
   },
   {
     id: 'zxl2',
@@ -378,7 +396,6 @@ export const projectsData: PROJECT[] = [
     startTime: '2017-11',
     endTime: '2018-04',
     images: [],
-    position: 'self-start',
   },
   {
     id: 'zxl1',
@@ -390,6 +407,5 @@ export const projectsData: PROJECT[] = [
     startTime: '2017-01',
     endTime: '2017-09',
     images: [],
-    position: 'self-start',
   },
 ]
