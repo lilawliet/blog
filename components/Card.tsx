@@ -35,6 +35,9 @@ const CardBody = ({ title, description, imgSrc, href, target }: CardProps) => {
       aria-label={isClickable ? `查看项目: ${title}` : `项目: ${title}`}
       onKeyDown={handleKeyDown}
     >
+      <div>{imgSrc}</div>
+      <div>{href}</div>
+      <div>{process.env.BASE_PATH}</div>
       {imgSrc && (
         <Image
           alt={title}
