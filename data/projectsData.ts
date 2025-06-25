@@ -143,7 +143,7 @@ export const projectsData: PROJECT[] = [
     startTime: '2022-12',
     endTime: '2023-04',
     images: [
-      '/static/images/1.png',
+      '/static/bessage/1.png',
       '/static/bessage/2.png',
       '/static/bessage/3.png',
       '/static/bessage/4.png',
