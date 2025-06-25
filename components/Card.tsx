@@ -47,6 +47,7 @@ const Card = ({ title, description, imgSrc, href, target }: CardProps) => {
               <Image
                 alt={title}
                 src={imgSrc}
+                useBasePath
                 className="h-32 w-full object-cover object-center transition-transform duration-500 ease-in-out group-hover:scale-110 sm:h-48"
                 width={544}
                 height={306}

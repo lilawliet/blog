@@ -63,6 +63,7 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
 }
 
 function ProjectListContent({ title }: ListLayoutProps) {
+  const basePath = process.env.BASE_PATH || ''
   const pathname = usePathname()
   const router = useRouter()
   const searchParams = useSearchParams()
@@ -226,7 +227,7 @@ function ProjectListContent({ title }: ListLayoutProps) {
                           description={d.description}
                           imgSrc={d.images?.[0]}
                           target={d.target}
-                          href={`${process.env.BASE_PATH || ''}${d.link}`}
+                          href={`${basePath}${d.link}`}
                         />
                       ))}
                     </MasonryGrid>
