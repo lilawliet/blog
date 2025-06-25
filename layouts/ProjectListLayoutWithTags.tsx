@@ -227,7 +227,7 @@ function ProjectListContent({ title }: ListLayoutProps) {
                           description={d.description}
                           imgSrc={d.images?.[0]}
                           target={d.target}
-                          href={`${basePath}${d.link}`}
+                          href={d.link}
                         />
                       ))}
                     </MasonryGrid>
