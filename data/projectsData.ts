@@ -61,7 +61,9 @@ export const projectsData: PROJECT[] = [
     tags: ['ant design', 'umijs', 'tradingview', 'react-native', 'react'],
     startTime: '2024-07',
     endTime: '2025-06',
-    images: [],
+    images: ['/static/stellux/1.webp'],
+    link: '/projects/stellux',
+    target: '_self',
   },
   {
     id: 'marsbetta',
