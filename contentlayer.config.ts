@@ -155,6 +155,8 @@ export const Authors = defineDocumentType(() => ({
     linkedin: { type: 'string' },
     github: { type: 'string' },
     layout: { type: 'string' },
+    desc: { type: 'string' },
+    resume: { type: 'string' },
   },
   computedFields,
 }))
@@ -235,6 +237,6 @@ export default makeSource({
     createTechCount(allProjects)
 
     // 创建搜索索引
-    createSearchIndex(allBlogs.concat(allProjects as any))
+    createSearchIndex(allBlogs.concat(allProjects as never))
   },
 })
