@@ -1,12 +1,14 @@
 {
   "react-native": 2,
-  "react": 2,
+  "react": 3,
   "redux-toolkit": 1,
-  "typescript": 1,
-  "docker": 1,
+  "typescript": 2,
+  "docker": 2,
   "go": 1,
   "mongodb": 1,
   "web3": 1,
+  "nextjs": 1,
+  "tailwindcss": 1,
   "ant-design": 1,
   "umijs": 1,
   "tradingview": 1

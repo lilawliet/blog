@@ -52,6 +52,19 @@ export type PROJECT = {
 
 export const projectsData: PROJECT[] = [
   {
+    id: 'lumiere',
+    name: 'Lumiere',
+    highlight: true,
+    description:
+      '集 AI 图片创作、内容探索与账户管理于一体的全栈应用，包含 Profile 个人中心、Admin 管理后台和 Explore 图片广场，串联会员充值、点数计费与图片资源管理。',
+    tags: ['nextjs', 'react', 'typescript', 'tailwindcss', 'docker'],
+    startTime: '2025-05',
+    endTime: '至今',
+    images: ['/static/lumiere/explore-public.webp'],
+    link: '/projects/lumiere',
+    target: '_self',
+  },
+  {
     id: 'marsbetta',
     name: 'Stellux 交易系统多端',
     highlight: true,
