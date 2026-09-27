@@ -30,19 +30,25 @@ Lumiere 是一个集 AI 创作、内容探索与账户管理于一体的全栈�
 
 账户资料页展示头像、昵称、邮箱、作者 ID 和会员状态，并集中呈现账户角色、邮箱验证及登录方式。邮箱、Google、GitHub 的关联状态分别展示，方便用户管理登录入口；作者 ID 则用于 Explore 中的创作者身份展示。
 
-[![Lumiere Profile 个人资料：账户信息、会员状态与邮箱、Google、GitHub 关联](/static/lumiere/profile-account.webp)](/static/lumiere/profile-account.webp)
+![Lumiere Profile 个人资料：账户信息、会员状态与邮箱、Google、GitHub 关联](/static/lumiere/profile-account.webp)
+
+[查看原图](/static/lumiere/profile-account.webp)
 
 ### 会员与点数充值
 
 会员页面展示当前会员状态和到期时间，提供会员升级、预设点数套餐与自定义点数购买入口。支付流程对接 Stripe，充值记录与消费流水分别管理，方便用户查看购买结果和后续使用情况。
 
-[![Lumiere Profile 会员与充值：会员权益、点数套餐和自定义购买入口](/static/lumiere/profile-membership.webp)](/static/lumiere/profile-membership.webp)
+![Lumiere Profile 会员与充值：会员权益、点数套餐和自定义购买入口](/static/lumiere/profile-membership.webp)
+
+[查看原图](/static/lumiere/profile-membership.webp)
 
 ### 点数记录与消费查询
 
 点数记录以表格呈现交易类型、业务类型、使用模型、点数变化和创建时间，支持按关键词、交易类型、业务、模型、时间及点数范围筛选。用户可以从具体流水了解点数的使用去向。
 
-[![Lumiere Profile 点数记录：按业务、模型、时间和点数范围筛选消费流水](/static/lumiere/profile-points.webp)](/static/lumiere/profile-points.webp)
+![Lumiere Profile 点数记录：按业务、模型、时间和点数范围筛选消费流水](/static/lumiere/profile-points.webp)
+
+[查看原图](/static/lumiere/profile-points.webp)
 
 ## Admin · 管理后台
 
@@ -52,37 +58,49 @@ Lumiere 是一个集 AI 创作、内容探索与账户管理于一体的全栈�
 
 用户列表聚合账户资料、点数余额、累计充值、累计支出和会员状态，支持按会员类型、有效期、创建时间及金额范围筛选。详情抽屉进一步展示关联账户和会员信息，便于从用户维度查询业务状态。
 
-[![Lumiere Admin 用户管理：用户列表与包含会员、点数、关联账户的详情抽屉](/static/lumiere/admin-users.webp)](/static/lumiere/admin-users.webp)
+![Lumiere Admin 用户管理：用户列表与包含会员、点数、关联账户的详情抽屉](/static/lumiere/admin-users.webp)
+
+[查看原图](/static/lumiere/admin-users.webp)
 
 ### 扣费记录与价格快照
 
 点数管理提供全局消费流水查询。每条交易可以查看点数变化、内部成本、关联业务记录与价格快照，将一次扣费对应到使用的模型、用量和计费规则，便于核对计费结果。
 
-[![Lumiere Admin 扣费管理：点数交易详情、关联信息和价格快照](/static/lumiere/admin-points.webp)](/static/lumiere/admin-points.webp)
+![Lumiere Admin 扣费管理：点数交易详情、关联信息和价格快照](/static/lumiere/admin-points.webp)
+
+[查看原图](/static/lumiere/admin-points.webp)
 
 ### 资源管理与图片处理
 
 资源管理集中展示文件归属、资源类型、业务关联和存储状态，支持在管理员鉴权后预览或下载。图片详情还会展示尺寸、格式、来源，以及用于列表卡片和详情展示的派生图片状态，方便排查资源生成或加载问题。
 
-[![Lumiere Admin 资源管理：图片预览、资源信息与 card、display 派生状态](/static/lumiere/admin-assets.webp)](/static/lumiere/admin-assets.webp)
+![Lumiere Admin 资源管理：图片预览、资源信息与 card、display 派生状态](/static/lumiere/admin-assets.webp)
+
+[查看原图](/static/lumiere/admin-assets.webp)
 
 ### 标签与分类管理
 
 标签管理维护英文规范名称、中文名称、分类和公开状态，同时展示关联资源及公开资格统计。后台的标签整理与 Explore 的搜索筛选相连接，使图片内容能够按主题、风格、对象等维度被发现。
 
-[![Lumiere Admin 标签管理：中英文名称、标签分类、公开状态与资源关联统计](/static/lumiere/admin-tags.webp)](/static/lumiere/admin-tags.webp)
+![Lumiere Admin 标签管理：中英文名称、标签分类、公开状态与资源关联统计](/static/lumiere/admin-tags.webp)
+
+[查看原图](/static/lumiere/admin-tags.webp)
 
 ### 计费中心
 
 计费中心分为成本库、策略库、绑定关系和模拟器。成本库记录模型成本，策略库维护点数扣费方式，绑定关系将具体业务与策略关联，模拟器用于验证计费结果。策略支持按次与阶梯计费，可配置最低扣点、基础点数及规则。
 
-[![Lumiere Admin 计费管理：策略列表与自定义计费策略编辑抽屉](/static/lumiere/admin-billing.webp)](/static/lumiere/admin-billing.webp)
+![Lumiere Admin 计费管理：策略列表与自定义计费策略编辑抽屉](/static/lumiere/admin-billing.webp)
+
+[查看原图](/static/lumiere/admin-billing.webp)
 
 ### 系统日志与问题排查
 
 系统日志展示关键服务端调用的结构化记录，支持按级别、分类和关键词筛选。通过事件名称、请求 ID、接口路径和错误元数据，可以定位认证、接口执行等环节的问题；后台同时提供业务日志、健康检查和会话管理入口。
 
-[![Lumiere Admin 系统日志：日志统计、筛选条件与请求错误详情](/static/lumiere/admin-logs.webp)](/static/lumiere/admin-logs.webp)
+![Lumiere Admin 系统日志：日志统计、筛选条件与请求错误详情](/static/lumiere/admin-logs.webp)
+
+[查看原图](/static/lumiere/admin-logs.webp)
 
 ## Explore · 图片创作与探索
 
@@ -92,25 +110,33 @@ Explore 将图片生成入口、公开作品和个人资源放在同一个工作
 
 公开列表以瀑布流展示不同尺寸的图片，并通过分页逐步加载内容。顶部保留模型选择和提示词输入入口，浏览与创作可以在同一页面中完成。公开作品与底层资源状态关联，只有符合发布条件的图片才会进入公开列表。
 
-[![Lumiere Explore 公开图片广场：瀑布流作品列表、模型选择与图片生成入口](/static/lumiere/explore-public.webp)](/static/lumiere/explore-public.webp)
+![Lumiere Explore 公开图片广场：瀑布流作品列表、模型选择与图片生成入口](/static/lumiere/explore-public.webp)
+
+[查看原图](/static/lumiere/explore-public.webp)
 
 ### 搜索与组合筛选
 
 Explore 支持关键词与标签搜索，并可组合模型、作者和宽高比等条件缩小结果范围。筛选条件保存在 URL 中，便于恢复浏览状态；页面同时展示匹配数量和可选标签，帮助用户继续探索相关内容。
 
-[![Lumiere Explore 搜索：关键词匹配、标签提示与模型、作者、宽高比筛选](/static/lumiere/explore-search.webp)](/static/lumiere/explore-search.webp)
+![Lumiere Explore 搜索：关键词匹配、标签提示与模型、作者、宽高比筛选](/static/lumiere/explore-search.webp)
+
+[查看原图](/static/lumiere/explore-search.webp)
 
 ### 我的图片与公开发布
 
 “我的”视图集中展示当前用户的图片资源，并用状态标识区分私有内容。用户可以查看自己的作品详情，将符合条件的图片发布到公开广场，也可以撤回已发布作品。公开发布记录与底层资源分开管理，个人资源查询则按当前登录用户校验归属。
 
-[![Lumiere Explore 我的图片：个人作品列表与私有图片状态标识](/static/lumiere/explore-private.webp)](/static/lumiere/explore-private.webp)
+![Lumiere Explore 我的图片：个人作品列表与私有图片状态标识](/static/lumiere/explore-private.webp)
+
+[查看原图](/static/lumiere/explore-private.webp)
 
 ## 补充展示 · Chat 图片生成
 
 Chat 提供会话形式的 AI 交互入口，保留对话历史、模型选择、提示词与生成结果，并展示本次生成消耗的点数。图中的聊天生成结果也体现了账户点数、图片资源与内容展示之间的联系。
 
-[![Lumiere Chat 聊天记录：历史会话、图片生成结果与消耗点数](/static/lumiere/chat-history.webp)](/static/lumiere/chat-history.webp)
+![Lumiere Chat 聊天记录：历史会话、图片生成结果与消耗点数](/static/lumiere/chat-history.webp)
+
+[查看原图](/static/lumiere/chat-history.webp)
 
 ## 实现重点
 
